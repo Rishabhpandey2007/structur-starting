@@ -1,8 +1,11 @@
 #include <stdio.h>
 
 int main(){
-     char source[]="harry";
-     char target[30];
-     strcpy(target,source);
+    FILE *ptr;
+    ptr = fopen("harry.txt","r");
+    int num;
+    fscanf(ptr,"%d",&num);
+    printf("the value of num is %d",num);
+    fclose(ptr);
     return 0;
 }
